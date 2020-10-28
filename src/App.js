@@ -3,10 +3,30 @@ import './App.css';
 import Todos from "./components/Todos";
 
 class App extends Component{
-  render() {
+    state = {
+        todos: [
+            {
+                id: 1,
+                title: "take it",
+                completed: false
+            },
+            {
+                id: 2,
+                title: "take it",
+                completed: false
+            },
+            {
+                id: 3,
+                title: "take it",
+                completed: false
+            }
+        ]
+    }
+
+    render() {
     return (
         <div className="App">
-          <Todos/>
+          <Todos todos={this.state.todos}/>
         </div>
     );
   }
